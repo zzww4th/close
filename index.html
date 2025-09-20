@@ -247,7 +247,7 @@
                         <li>普安晴隆预收/预付款跟踪、到货协调、到货款结算策划</li>
                         <li>普安晴隆碧痕组件合同签订、运输实施</li>
                         <li>高密100MW风电项目总包合同签订</li>
-                           <ul><span style="color:#f76a05;font-weight:bold;font-size:1rem">P.S.</span> 传闻运达拟弃标</ul>
+                           <ul><span style="color:#f76a05;font-weight:bold;font-size:1rem">P.S.</span> 9月22日第一次设计联络会，需加快项目对接，争取完成合同初稿。</ul>
                         <li>昔阳50MW风电项目初步对接</li>
                     </ul>
                 </div>
@@ -429,15 +429,15 @@
                 <p><strong>（一）利润计划</strong></p>
                 <ul>
                     <li>辰溪风电结算 4 台套</li>
-                    <li>木垒项目风机结算 11 台套</li>
+                    <li>木垒项目风机结算 11 台套</li> 
                     <li>普安猫猫井光伏结算 50MW </li>
                 </ul>
 
                 <p><strong>（二）资金收支</strong></p>
                 <ul>
-                    <li>收：木垒项目垫付风机 10% 预付款 + 30% 投料款</li>
-                    <li>收：普安晴隆光伏项目 10% 预付款 + 20% 投料款</li>
-                    <li>付：木垒项目代采辅材成套款</li>
+                    <li>收：木垒项目代采辅材100%货款</li>
+                    <li>收：普安晴隆光伏项目 10% 预付款 + 20% 投料款</li>？？
+                    <li>付：木垒项目代采辅材剩余成套款</li>
                     <li>付：湖北麻城光伏项目应付晶科质保金</li>
                 </ul>
 
@@ -453,7 +453,12 @@
                 <p><strong>（四）新项目推进</strong></p>
                 <ul>
                     <li>普安厂内光伏技改项目前期。</li>
-                    <li>山西昔阳风电项目跟踪。</li>
+                    <li>山西昔阳50MW风电项目跟踪。</li>
+                    <li>山东高密100MW风电项目跟踪。</li>
+                    <UL>
+
+                        <li>9月22日第一次设计联络会，加快项目对接，争取完成合同初稿。</li>
+                    </UL>
                     <li>普安晴隆大厂项目组件改型跟踪。大厂项目预计 2026 年实施，基于技术迭代的要求，应尽量促成。</li>
                 </ul>
             </section>
@@ -474,14 +479,19 @@
         /* ---------- 登录校验 ---------- */
         document.addEventListener('DOMContentLoaded', () => {
             const loginContainer = document.getElementById('loginContainer');
+           // 强制隐藏登录框（仅本地调试时用）
+               loginContainer.style.display = 'none';
+
             const loginBtn = document.getElementById('loginBtn');
             const pwInput = document.getElementById('password');
             const errMsg = document.getElementById('errorMessage');
 
-            // 检查是否已登录
+        //注释掉原登录验证逻辑
+           // 检查是否已登录
             if (sessionStorage.getItem('authenticated') === 'true') {
                 loginContainer.style.display = 'none';
             }
+        //其他代码保持不变
 
             // 登录验证函数，调用后端API
             const tryLogin = async () => {
