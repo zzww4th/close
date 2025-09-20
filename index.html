@@ -480,18 +480,18 @@
         document.addEventListener('DOMContentLoaded', () => {
             const loginContainer = document.getElementById('loginContainer');
            // 强制隐藏登录框（仅本地调试时用）
-               loginContainer.style.display = 'none';
+           //    loginContainer.style.display = 'none';
 
             const loginBtn = document.getElementById('loginBtn');
             const pwInput = document.getElementById('password');
             const errMsg = document.getElementById('errorMessage');
 
-        //注释掉原登录验证逻辑
+        // 注释掉原登录验证逻辑 
            // 检查是否已登录
             if (sessionStorage.getItem('authenticated') === 'true') {
                 loginContainer.style.display = 'none';
             }
-        //其他代码保持不变
+        //  其他代码保持不变 
 
             // 登录验证函数，调用后端API
             const tryLogin = async () => {
